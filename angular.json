@@ -3,7 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+<<<<<<< HEAD
+    "intershipMohammed": {
+=======
     "internshipFrontend": {
+>>>>>>> initial commit
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +21,11 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+<<<<<<< HEAD
+            "outputPath": "dist/intershipMohammed",
+=======
             "outputPath": "dist/internshipFrontend",
+>>>>>>> initial commit
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,14 +36,9 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.scss",
-              "./node_modules/bootstrap/dist/css/bootstrap.css"
+              "src/styles.scss"
             ],
-            "scripts": [
-              "./node_modules/jquery/dist/jquery.js",
-              "./node_modules/bootstrap/dist/js/bootstrap.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -71,18 +74,30 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
+<<<<<<< HEAD
+            "browserTarget": "intershipMohammed:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "intershipMohammed:build:production"
+=======
             "browserTarget": "internshipFrontend:build"
           },
           "configurations": {
             "production": {
               "browserTarget": "internshipFrontend:build:production"
+>>>>>>> initial commit
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
+<<<<<<< HEAD
+            "browserTarget": "intershipMohammed:build"
+=======
             "browserTarget": "internshipFrontend:build"
+>>>>>>> initial commit
           }
         },
         "test": {
@@ -97,7 +112,6 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -120,19 +134,27 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
+<<<<<<< HEAD
+            "devServerTarget": "intershipMohammed:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "intershipMohammed:serve:production"
+=======
             "devServerTarget": "internshipFrontend:serve"
           },
           "configurations": {
             "production": {
               "devServerTarget": "internshipFrontend:serve:production"
+>>>>>>> initial commit
             }
           }
         }
       }
-    }
-  },
-  "defaultProject": "internshipFrontend",
-  "cli": {
-    "analytics": "c1705f2a-cae2-46ea-bb9e-64c8a98eb155"
-  }
+    }},
+<<<<<<< HEAD
+  "defaultProject": "intershipMohammed"
+=======
+  "defaultProject": "internshipFrontend"
+>>>>>>> initial commit
 }
