@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ListeClientsComponent } from './liste-clients/liste-clients.component';
-import { AjouterClientComponent } from './ajouter-client/ajouter-client.component';
 
 
 const routes: Routes = [
@@ -14,16 +13,11 @@ const routes: Routes = [
     { 
       path: 'listeClients',
       component: ListeClientsComponent
-     },
-     {
-       path:'ajouterClient',
-       component:AjouterClientComponent
-
      }
   ]
   },
   {
-  path:'',redirectTo:'/home/listeClients',
+  path:'',redirectTo:'/home',
   pathMatch:'full'
   }
 ];
