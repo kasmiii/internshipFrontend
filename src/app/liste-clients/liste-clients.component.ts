@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
-=======
-import { Component, OnInit } from '@angular/core';
->>>>>>> adding home and liste Clients components and menu
 
 @Component({
   selector: 'app-liste-clients',
@@ -13,7 +9,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListeClientsComponent implements OnInit {
 
-<<<<<<< HEAD
   title = 'internshipFrontend';
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
@@ -55,11 +50,3 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {position: 19, name: 'Potassium', weight: 39.0983, symbol: 'K'},
   {position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca'},
 ];
-=======
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-}
->>>>>>> adding home and liste Clients components and menu

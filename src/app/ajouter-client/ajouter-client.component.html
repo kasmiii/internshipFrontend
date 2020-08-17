@@ -12,7 +12,10 @@
                 <mat-form-field appearance="fill">
                     <input matInput formControlName="nom_client" placeholder="Nom du Client">
                 </mat-form-field>
+<<<<<<< HEAD
             
+=======
+>>>>>>> adding menu,ajouterClient component
                 <!--errors for name formControl-->
                 <mat-error *ngIf="nom_client.errors.required||nom_client.errors.minlength">
                     Name is <strong>invalid</strong>
@@ -144,6 +147,10 @@
             </div>
         </div>
         <button mat-raised-button color="primary" type="submit" [disabled]="!clientForm.valid">Ajouter</button>
+<<<<<<< HEAD
+=======
+        <!--<button  type="submit" [disabled]="clientForm.invalid">Ajouter</button>-->
+>>>>>>> adding menu,ajouterClient component
     </form>
     
   </div>
