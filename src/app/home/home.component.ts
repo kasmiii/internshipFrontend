@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
     //this.dataSource.paginator = this.paginator;
 =======
 
+<<<<<<< Updated upstream
   title = 'internshipFrontend';
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
@@ -28,17 +29,17 @@ export class HomeComponent implements OnInit {
 
    openNav() {
     document.getElementById("mySidenav").style.width = "250px";
+=======
+  ngOnInit(){
+    
+>>>>>>> Stashed changes
   }
-  
-   closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-  }
-
 }
 <<<<<<< HEAD
 =======
 
 
+<<<<<<< Updated upstream
 export interface PeriodicElement {
   name: string;
   position: number;
@@ -69,3 +70,5 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca'},
 ];
 >>>>>>> adding home and liste Clients components and menu
+=======
+>>>>>>> Stashed changes

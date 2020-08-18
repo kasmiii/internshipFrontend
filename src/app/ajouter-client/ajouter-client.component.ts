@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
+<<<<<<< Updated upstream
+=======
+import { ErrorStateMatcher } from '@angular/material/core';
+import { JsonPipe } from '@angular/common';
+>>>>>>> Stashed changes
 
 /** Error when invalid control is dirty, touched, or submitted. */
 /*export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -18,6 +23,11 @@ export class AjouterClientComponent implements OnInit {
 
   constructor(private fb: FormBuilder) { }
 
+<<<<<<< Updated upstream
+=======
+  
+
+>>>>>>> Stashed changes
   cities=[
     {id:1,name:'Rabat'},
     {id:2,name:'Fes'},

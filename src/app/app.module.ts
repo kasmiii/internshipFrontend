@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MatSliderModule } from '@angular/material/slider';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgForm } from '@angular/forms';
+import { NgForm, ReactiveFormsModule } from '@angular/forms';
 import { MatTableModule } from '@angular/material/table'; 
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { HomeComponent } from './home/home.component';
@@ -53,13 +53,15 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 import {OverlayModule} from '@angular/cdk/overlay';
 import { ListeClientsComponent } from './liste-clients/liste-clients.component';
+import { AjouterClientComponent } from './ajouter-client/ajouter-client.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ListeClientsComponent
+    ListeClientsComponent,
+    AjouterClientComponent
   ],
   imports: [
     BrowserModule,
@@ -68,6 +70,7 @@ import { ListeClientsComponent } from './liste-clients/liste-clients.component';
     AppRoutingModule,
     MatSliderModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
     //imports Module for angular material
 
     A11yModule,
