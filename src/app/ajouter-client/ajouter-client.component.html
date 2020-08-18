@@ -1,0 +1,149 @@
+<div class="container-fluid p-3 my-2 bg-primary text-white">
+    Ajouter un client
+</div>
+<div class="container">
+    <img src="./assets/images/admin.png">
+</div>
+
+<div class="container">
+    <form [formGroup]="clientForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="col">
+                <mat-form-field appearance="fill">
+                    <input matInput formControlName="nom_client" placeholder="Nom du Client">
+                </mat-form-field>
+            
+                <!--errors for name formControl-->
+                <mat-error *ngIf="nom_client.errors.required||nom_client.errors.minlength">
+                    Name is <strong>invalid</strong>
+                </mat-error>
+
+                <!--<mat-error *ngIf="nom_client.errors.minlength">
+                    lenght should be more than  <strong>4</strong>
+                </mat-error>-->
+
+            </div>
+            <div class="col">
+                <mat-form-field appearance="fill">
+                    <mat-label>Type du client</mat-label>
+                    <mat-select formControlName="type_client" [(value)]="typeClient">
+                        <mat-option>None</mat-option>
+                        <mat-option value="particulier">Particulier</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="col">
+                <mat-form-field hintLabel="cin pour particulier" appearance="fill">
+                    <input matInput formControlName="cin_client"
+                    placeholder="CIN pour particulier"><!-- [disabled]="typeClient===particulier?false:true" --> 
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <mat-form-field aria-placeholder="Address..." appearance="fill">
+                    <textarea matInput placeholder="Address..." formControlName="adresse_client"></textarea>    
+                </mat-form-field>
+            </div>
+            <div class="col">
+                <mat-form-field appearance="fill">
+                    <mat-label>Choisir une ville</mat-label>
+                    <mat-select [(value)]="nomVille" formControlName="ville_id"><!---->
+                    <mat-option *ngFor="let city of cities" [value]="city.id">
+                        {{city.name}}
+                    </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="col">
+                <mat-form-field aria-placeholder="Code postal" appearance="fill">
+                    <textarea matInput placeholder="Code postal" formControlName="code_postal_client"></textarea>    
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row">
+
+            
+            <div class="col">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName="email_client"
+                        placeholder="Ex. kasmi@example.com">
+                    <mat-hint>Errors appear instantly!</mat-hint>
+                    
+                    <!--<mat-error *ngIf="email_client.errors.email">
+                    Please enter a valid email address
+                    </mat-error>-->
+
+                    <!--<mat-error *ngIf="email_client.errors.required">
+                    Email is <strong>required</strong>
+                    </mat-error>-->
+
+                    <!--<mat-error *ngIf="email_client.errors.minlength">
+                       Lenght should be >=10 alphabets
+                    </mat-error>-->
+
+                </mat-form-field>
+            </div>
+            
+
+            <div class="col">
+                <mat-form-field appearance="fill">
+                    <input matInput formControlName="telephone_client" placeholder="Telephone">
+                </mat-form-field>
+            </div>
+
+            <div class="col">
+                <mat-form-field appearance="fill">
+                    <input matInput formControlName="obs_client" placeholder="Observation">
+                </mat-form-field>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <mat-form-field appearance="fill">
+                    <input matInput formControlName="cnss_client" placeholder="CNSS">
+                </mat-form-field>
+            </div>
+
+            <div class="col">
+                <mat-form-field appearance="fill">
+                    <input matInput formControlName="if_client" placeholder="IF(Identifiant Fiscal)">
+                </mat-form-field>
+            </div>
+
+            <div class="col">
+                <mat-form-field appearance="fill">
+                    <input matInput formControlName="ice_client" placeholder="ICE(Identifiant Commun de l'Entreprise)">
+                </mat-form-field>
+            </div>
+
+            <div class="col">
+                <mat-form-field appearance="fill">
+                    <input matInput formControlName="rc_client" placeholder="RC(Registre de Commerce)">
+                </mat-form-field>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <mat-form-field appearance="fill">
+                    <input matInput formControlName="rs_client" placeholder="Raison Social">
+                </mat-form-field>
+            </div>
+
+            <div class="col">
+                <mat-form-field appearance="fill">
+                    <input matInput formControlName="siteweb_client" placeholder="Site Web">
+                </mat-form-field>
+            </div>
+        </div>
+        <button mat-raised-button color="primary" type="submit" [disabled]="!clientForm.valid">Ajouter</button>
+    </form>
+    
+  </div>
