@@ -54,6 +54,7 @@ import {MatTreeModule} from '@angular/material/tree';
 import {OverlayModule} from '@angular/cdk/overlay';
 import { ListeClientsComponent } from './liste-clients/liste-clients.component';
 import { AjouterClientComponent } from './ajouter-client/ajouter-client.component';
+import { OnChangeComponent } from './on-change/on-change.component';
 
 
 @NgModule({
@@ -61,7 +62,8 @@ import { AjouterClientComponent } from './ajouter-client/ajouter-client.componen
     AppComponent,
     HomeComponent,
     ListeClientsComponent,
-    AjouterClientComponent
+    AjouterClientComponent,
+    OnChangeComponent
   ],
   imports: [
     BrowserModule,

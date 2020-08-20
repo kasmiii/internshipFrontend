@@ -12,10 +12,6 @@
                 <mat-form-field appearance="fill">
                     <input matInput formControlName="nom_client" placeholder="Nom du Client">
                 </mat-form-field>
-<<<<<<< Updated upstream
-            
-=======
->>>>>>> Stashed changes
                 <!--errors for name formControl-->
                 <mat-error *ngIf="nom_client.errors.required||nom_client.errors.minlength">
                     Name is <strong>invalid</strong>
@@ -147,13 +143,6 @@
             </div>
         </div>
         <button mat-raised-button color="primary" type="submit" [disabled]="!clientForm.valid">Ajouter</button>
-<<<<<<< Updated upstream
     </form>
     
   </div>
-=======
-        <!--<button  type="submit" [disabled]="clientForm.invalid">Ajouter</button>-->
-    </form>
-    
-  </div>
->>>>>>> Stashed changes
