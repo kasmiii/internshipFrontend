@@ -1,2 +1,9 @@
 <label for="name">Name:</label>
 <input type="text" id="name" [(ngModel)]="name"/>
+
+
+<h4>the actual value is:{{name}}</h4>
+
+<div *ngFor="let change of changeLog">
+    <h4 class="text-primary">{{change}}</h4>
+</div>

@@ -1,0 +1,62 @@
+<div class="container-fluid p-3 my-2 bg-primary text-white">
+    Ajouter une demande client
+</div>
+<div class="container">
+    <img src="./assets/images/admin.png">
+</div>
+
+<div class="container">
+    <form [formGroup]="demandeClientForm" (ngSubmit)="onAddDemandeClient()">
+
+        <div class="row">
+
+            <div class="col">
+                <mat-form-field appearance="fill">
+                    <input matInput formControlName="objet_demande" placeholder="Objet">
+                </mat-form-field>
+            </div>
+            <div class="col">
+                
+                <mat-form-field appearance="fill">
+                    <mat-label>type de demande</mat-label>
+                    <mat-select [(value)]="type_demande_id" formControlName="type_demande"><!---->
+                    <mat-option *ngFor="let demande of demandes" [value]="demande.id">
+                        {{demande.name}}
+                    </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="col">
+                <mat-form-field appearance="fill">
+                    <mat-label>Responsable</mat-label>
+                    <mat-select [(value)]="responsable_id" formControlName="responsable">
+                    <mat-option *ngFor="let responsable of responsables" [value]="responsable.id">
+                        {{responsable.name}}
+                    </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+        </div>
+        <div class="row">
+                
+                <div class="col">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Choose a date</mat-label>
+                        <input matInput [matDatepicker]="picker" formControlName="date_demande">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                      </mat-form-field>
+                </div>
+                
+                <div class="col">
+                    <mat-form-field>
+                        <input matInput formControlName="observation" placeholder="Observation"/>
+                    </mat-form-field>
+                    
+                </div>
+        </div>
+
+        <button mat-raised-button color="primary" type="submit" [disabled]="!demandeClientForm.valid">Ajouter</button>
+    </form>
+</div>

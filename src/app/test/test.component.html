@@ -1,0 +1,19 @@
+<p>test works!</p>
+
+<h4>the pipe :{{2 | exponentialStrengthPipe:10}}</h4>
+<div>Normal power: <input [(ngModel)]="power"></div>
+
+<p>
+    the new power is: {{power | exponentialStrengthPipe:10}}
+</p>
+
+New hero:
+  <input type="text" #box
+          (keyup.enter)="addHero(box.value,canfly.checked); box.value=''"
+          placeholder="hero name">
+  <input type="checkbox" #canfly>
+  <button (click)="reset()">Reset</button>
+  <div *ngFor="let hero of (heroes | flyingHeroesPipe)">
+    {{hero.name}}
+    canFly:{{hero.canFly}}
+  </div>

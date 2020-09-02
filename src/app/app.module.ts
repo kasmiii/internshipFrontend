@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MatSliderModule } from '@angular/material/slider';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgForm, ReactiveFormsModule } from '@angular/forms';
+import { NgForm, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatTableModule } from '@angular/material/table'; 
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { HomeComponent } from './home/home.component';
@@ -55,15 +55,26 @@ import {OverlayModule} from '@angular/cdk/overlay';
 import { ListeClientsComponent } from './liste-clients/liste-clients.component';
 import { AjouterClientComponent } from './ajouter-client/ajouter-client.component';
 import { OnChangeComponent } from './on-change/on-change.component';
+import { ExponentialStrengthPipePipe } from './pipes/exponential-strength-pipe.pipe';
+import { TestComponent } from './test/test.component';
+import { FlyingHeroesPipePipe } from './pipes/flying-heroes-pipe.pipe';
+import { AjouterFourniseurComponent } from './ajouter-fourniseur/ajouter-fourniseur.component';
+import { AjouterDemandeClientComponent } from './ajouter-demande-client/ajouter-demande-client.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    OnChangeComponent,
     ListeClientsComponent,
     AjouterClientComponent,
-    OnChangeComponent
+    ExponentialStrengthPipePipe,
+    TestComponent,
+    FlyingHeroesPipePipe,
+    AjouterFourniseurComponent,
+    AjouterDemandeClientComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -72,7 +83,9 @@ import { OnChangeComponent } from './on-change/on-change.component';
     AppRoutingModule,
     MatSliderModule,
     BrowserAnimationsModule,
+    FormsModule,
     ReactiveFormsModule,
+    
     //imports Module for angular material
 
     A11yModule,
